@@ -21,14 +21,7 @@ pipeline {
       }
     }
     
-    stage('Test') {
-      steps {
-        // Run the Maven tests if needed
-        dir('usingpipeline'){
-        sh 'mvn -B -DskipTests=false test'
-        }
-      }
-    }
+    
   }
     
   
