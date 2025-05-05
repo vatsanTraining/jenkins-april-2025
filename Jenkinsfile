@@ -15,7 +15,7 @@ pipeline {
     stage('Build') {
       steps {
         // Run the Maven build commands
-        dir('jenkins-april-2025'){
+        dir('usingpipeline'){
         sh 'mvn -B -DskipTests clean package'
         }// Clean, package, and install the artifact
       }
@@ -24,7 +24,7 @@ pipeline {
     stage('Test') {
       steps {
         // Run the Maven tests if needed
-        dir('jenkins-april-2025'){
+        dir('usingpipeline'){
         sh 'mvn -B -DskipTests=false test'
         }
       }
