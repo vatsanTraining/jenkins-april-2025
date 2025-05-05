@@ -8,15 +8,14 @@ pipeline {
     stage('Checkout') {
       steps {
         // Checkout the source code from your Git repository
-        git 'https://github.com/vatsanTraining/jenkins_lab.git' // Replace with your Git repository URL
-        // You can also specify the branch here if needed
+        git 'https://github.com/vatsanTraining/jenkins-april-2025.git' 
       }
     }
 
     stage('Build') {
       steps {
         // Run the Maven build commands
-        dir('pipeline-scm'){
+        dir('jenkins-april-2025'){
         sh 'mvn -B -DskipTests clean package'
         }// Clean, package, and install the artifact
       }
@@ -25,7 +24,7 @@ pipeline {
     stage('Test') {
       steps {
         // Run the Maven tests if needed
-        dir('pipeline-scm'){
+        dir('jenkins-april-2025'){
         sh 'mvn -B -DskipTests=false test'
         }
       }
@@ -36,3 +35,6 @@ pipeline {
 
  
 }
+
+
+
