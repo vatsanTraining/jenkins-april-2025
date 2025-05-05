@@ -13,4 +13,10 @@ public class MyController {
 		
 		return  "Welcome to Spring Framework";
 	}
+	
+	@GetMapping(path = "/greet")
+	public String getWelcomeMessage() {
+		
+		return  "Welcome to Spring with jenkins";
+	}
 }
